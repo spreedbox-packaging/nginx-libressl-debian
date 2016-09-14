@@ -1,3 +1,11 @@
+nginx (1.10.1-1+struktur2~trusty1) trusty; urgency=low
+
+  * Don't ship upstart script (fixes FS#3833).
+  * Remove broken upstart script if present (FS#3833).
+  * Build with all hardening enabled now that FS#3828 has been resolved.
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 14 Sep 2016 12:56:14 +0200
+
 nginx (1.10.1-1+struktur2~trusty0) trusty; urgency=medium
 
   * Statically link against LibreSSL.
