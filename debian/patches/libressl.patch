@@ -14,7 +14,7 @@ Author: struktur AG <opensource@struktur.de>
 -        ngx_feature_path=
 -        ngx_feature_libs="-lssl -lcrypto $NGX_LIBDL"
 +        ngx_feature_path='/usr/include/libressl'
-+        ngx_feature_libs="$DEBIAN_STATIC_LIB_PATH/libressl-ssl.a $DEBIAN_STATIC_LIB_PATH/libressl-crypto.a $NGX_LIBDL"
++        ngx_feature_libs="$DEBIAN_STATIC_LIB_PATH/libressl-ssl.a $DEBIAN_STATIC_LIB_PATH/libressl-crypto.a $NGX_LIBDL -lrt"
          ngx_feature_test="SSL_CTX_set_options(NULL, 0)"
          . auto/feature
  

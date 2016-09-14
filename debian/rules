@@ -1,11 +1,7 @@
 #!/usr/bin/make -f
 export DH_VERBOSE=1
 
-# TODO(jojo): Build with all hardening enabled. Currently doesn't work as the
-# static LibreSSL libraries require the application to be compiled using "-fPIC"
-# which is not enabled with PIE hardening (compiles using "-fPIE").
-#export DEB_BUILD_MAINT_OPTIONS=hardening=+all
-export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 debian_cflags:=$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 debian_ldflags:=$(shell dpkg-buildflags --get LDFLAGS)
 
