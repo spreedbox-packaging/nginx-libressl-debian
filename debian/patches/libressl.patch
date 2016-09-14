@@ -1,0 +1,77 @@
+Description: Link nginx statically against LibreSSL.
+Author: struktur AG <opensource@struktur.de>
+--- a/auto/lib/openssl/conf
++++ b/auto/lib/openssl/conf
+@@ -46,12 +46,12 @@
+ 
+         OPENSSL=NO
+ 
+-        ngx_feature="OpenSSL library"
++        ngx_feature="LibreSSL library"
+         ngx_feature_name="NGX_OPENSSL"
+         ngx_feature_run=no
+         ngx_feature_incs="#include <openssl/ssl.h>"
+-        ngx_feature_path=
+-        ngx_feature_libs="-lssl -lcrypto $NGX_LIBDL"
++        ngx_feature_path='/usr/include/libressl'
++        ngx_feature_libs="$DEBIAN_STATIC_LIB_PATH/libressl-ssl.a $DEBIAN_STATIC_LIB_PATH/libressl-crypto.a $NGX_LIBDL"
+         ngx_feature_test="SSL_CTX_set_options(NULL, 0)"
+         . auto/feature
+ 
+@@ -115,9 +115,9 @@
+ 
+ cat << END
+ 
+-$0: error: SSL modules require the OpenSSL library.
+-You can either do not enable the modules, or install the OpenSSL library
+-into the system, or build the OpenSSL library statically from the source
++$0: error: SSL modules require the LibreSSL library.
++You can either do not enable the modules, or install the LibreSSL library
++into the system, or build the LibreSSL library statically from the source
+ with nginx by using --with-openssl=<path> option.
+ 
+ END
+--- a/auto/lib/md5/conf
++++ b/auto/lib/md5/conf
+@@ -6,7 +6,7 @@
+ if [ $MD5 != NONE ]; then
+ 
+     if grep MD5_Init $MD5/md5.h 2>&1 >/dev/null; then
+-        # OpenSSL md5
++        # LibreSSL md5
+         OPENSSL_MD5=YES
+         have=NGX_HAVE_OPENSSL_MD5 . auto/have
+         have=NGX_OPENSSL_MD5 . auto/have
+@@ -76,12 +76,12 @@
+ 
+         if [ $ngx_found = no ]; then
+ 
+-            # OpenSSL crypto library
++            # LibreSSL crypto library
+ 
+-            ngx_feature="md5 in system OpenSSL crypto library"
++            ngx_feature="md5 in system LibreSSL crypto library"
+             ngx_feature_name="NGX_OPENSSL_MD5"
+             ngx_feature_incs="#include <openssl/md5.h>"
+-            ngx_feature_libs="-lcrypto"
++            ngx_feature_libs="$DEBIAN_STATIC_LIB_PATH/libressl-crypto.a"
+             ngx_feature_test="MD5_CTX md5; MD5_Init(&md5)"
+             . auto/feature
+ 
+--- a/auto/lib/sha1/conf
++++ b/auto/lib/sha1/conf
+@@ -55,11 +55,11 @@
+ 
+         if [ $ngx_found = no ]; then
+ 
+-            # OpenSSL crypto library
++            # LibreSSL crypto library
+ 
+-            ngx_feature="sha1 in system OpenSSL crypto library"
++            ngx_feature="sha1 in system LibreSSL crypto library"
+             ngx_feature_incs="#include <openssl/sha.h>"
+-            ngx_feature_libs="-lcrypto"
++            ngx_feature_libs="$DEBIAN_STATIC_LIB_PATH/libressl-crypto.a"
+             . auto/feature
+ 
+             ngx_sha1_lib="system crypto"

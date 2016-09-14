@@ -1,7 +1,11 @@
 #!/usr/bin/make -f
 export DH_VERBOSE=1
 
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+# TODO(jojo): Build with all hardening enabled. Currently doesn't work as the
+# static LibreSSL libraries require the application to be compiled using "-fPIC"
+# which is not enabled with PIE hardening (compiles using "-fPIE").
+#export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
 debian_cflags:=$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 debian_ldflags:=$(shell dpkg-buildflags --get LDFLAGS)
 
@@ -9,6 +13,10 @@ debian_ldflags:=$(shell dpkg-buildflags --get LDFLAGS)
 # see: src/http/modules/perl/Makefile.PL
 DEBIAN_NGINX_PERL_LDFLAGS:= $(shell DEB_BUILD_MAINT_OPTIONS=hardening=+all,-pie dpkg-buildflags --get LDFLAGS)
 export DEBIAN_NGINX_PERL_LDFLAGS
+
+# Used for static linkage of LibreSSL.
+DEBIAN_STATIC_LIB_PATH := /usr/lib/$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEBIAN_STATIC_LIB_PATH
 
 FLAVOURS := core full light extras
 
