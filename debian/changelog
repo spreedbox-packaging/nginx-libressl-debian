@@ -1,3 +1,10 @@
+nginx (1.10.1-1+struktur2~trusty0) trusty; urgency=medium
+
+  * Statically link against LibreSSL.
+  * Enable HTTP/2 in "-light" package.
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 14 Sep 2016 10:44:12 +0200
+
 nginx (1.10.1-0ubuntu1) yakkety; urgency=medium
 
   * New upstream release (1.10.1) - full changelog available at upstream
