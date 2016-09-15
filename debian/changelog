@@ -1,3 +1,9 @@
+nginx (1.10.1-1+struktur2~trusty2) trusty; urgency=medium
+
+  * Only report new stable releases.
+
+ -- Joachim Bauch <bauch@struktur.de>  Thu, 15 Sep 2016 09:06:11 +0200
+
 nginx (1.10.1-1+struktur2~trusty1) trusty; urgency=low
 
   * Don't ship upstart script (fixes FS#3833).
