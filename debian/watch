@@ -1,3 +1,4 @@
 version=3
+# Only report new stable releases.
 opts=pgpsigurlmangle=s/$/.asc/ \
-http://nginx.org/download/nginx-(\d\.\d+\.\d+)\.tar\.gz
+http://nginx.org/download/nginx-(\d\.[123456789]?[02468]\.\d+)\.tar\.gz
