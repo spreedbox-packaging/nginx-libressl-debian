@@ -21,7 +21,7 @@ Build-Depends: autotools-dev,
                libpam0g-dev,
                libpcre3-dev,
                libperl-dev,
-               libressl-dev (>= 2.4.2),
+               libressl-dev (>= 2.4.3),
                libxslt1-dev,
                po-debconf,
                zlib1g-dev
