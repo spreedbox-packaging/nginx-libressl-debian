@@ -1,3 +1,9 @@
+nginx (1.10.1-1+struktur3~trusty1) trusty; urgency=medium
+
+  * Build against libressl 2.4.3
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 28 Sep 2016 09:21:13 +0200
+
 nginx (1.10.1-1+struktur2~trusty2) trusty; urgency=medium
 
   * Only report new stable releases.
