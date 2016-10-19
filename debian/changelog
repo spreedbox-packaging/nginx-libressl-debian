@@ -1,3 +1,10 @@
+nginx (1.10.2-1+struktur1~trusty1) trusty; urgency=medium
+
+  * Imported Upstream version 1.10.2
+  * Updated patch for new upstream version.
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 19 Oct 2016 09:20:27 +0200
+
 nginx (1.10.1-1+struktur3~trusty1) trusty; urgency=medium
 
   * Build against libressl 2.4.3
