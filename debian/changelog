@@ -1,3 +1,16 @@
+nginx (1.10.2-1+struktur2~trusty1) trusty; urgency=low
+
+  * Backported fix for CVE-2016-1247 from upstream:
+    + CVE-2016-1247: Secure log file handling (owner & permissions)
+      against privilege escalation attacks. /var/log/nginx is now owned
+      by root:adm. Thanks ro Dawid Golunski for the report.
+      Changing /var/log/nginx permissions effectively reopens #701112,
+      since log files can be world-readable. This is a trade-off until
+      a better log opening solution is implemented upstream (trac:376).
+      (Closes: #842295)
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 02 Nov 2016 15:37:13 +0100
+
 nginx (1.10.2-1+struktur1~trusty1) trusty; urgency=medium
 
   * Imported Upstream version 1.10.2
