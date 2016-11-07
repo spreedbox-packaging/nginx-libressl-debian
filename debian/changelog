@@ -1,3 +1,9 @@
+nginx (1.10.2-1+struktur3~trusty1) trusty; urgency=medium
+
+  * Build against libressl 2.4.4
+
+ -- Joachim Bauch <bauch@struktur.de>  Mon, 07 Nov 2016 09:26:52 +0100
+
 nginx (1.10.2-1+struktur2~trusty1) trusty; urgency=low
 
   * Backported fix for CVE-2016-1247 from upstream:
