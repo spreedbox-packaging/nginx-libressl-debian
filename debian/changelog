@@ -1,3 +1,9 @@
+nginx (1.10.2-1+struktur3~precise3) precise; urgency=medium
+
+  * Backport for Precise (12.04)
+
+ -- Simon Eisenmann <simon@struktur.de>  Wed, 09 Nov 2016 11:45:23 +0100
+
 nginx (1.10.2-1+struktur3~trusty1) trusty; urgency=medium
 
   * Build against libressl 2.4.4
