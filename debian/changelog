@@ -1,3 +1,11 @@
+nginx (1.10.3-1+struktur1~precise1) precise; urgency=medium
+
+  * Imported Upstream version 1.10.3
+  * Updated branding patch for new upstream version.
+  * Build against libressl 2.4.5
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 01 Feb 2017 09:19:56 +0100
+
 nginx (1.10.2-1+struktur3~precise3) precise; urgency=medium
 
   * Backport for Precise (12.04)
