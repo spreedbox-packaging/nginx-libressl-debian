@@ -1,3 +1,11 @@
+nginx (1.10.3-1+struktur2~trusty1) trusty; urgency=medium
+
+  * Build against libressl 2.5.1
+  * Added patch to enable configuring a list of ECDH curves (backport from 1.11.0).
+  * LibreSSL 2.5.1 no longer exposes "tlsext_status_expected" but handles this internally.
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 08 Feb 2017 16:41:25 +0100
+
 nginx (1.10.3-1+struktur1~trusty1) trusty; urgency=medium
 
   * Imported Upstream version 1.10.3
