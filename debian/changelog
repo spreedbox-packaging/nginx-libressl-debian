@@ -1,3 +1,9 @@
+nginx (1.10.3-1+struktur2~xenial1) xenial; urgency=medium
+
+  * Rebuild on Ubuntu 16.04
+
+ -- Simon Eisenmann <simon@struktur.de>  Tue, 14 Feb 2017 17:15:12 +0100
+
 nginx (1.10.3-1+struktur2~trusty1) trusty; urgency=medium
 
   * Build against libressl 2.5.1
