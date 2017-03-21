@@ -1,3 +1,9 @@
+nginx (1.10.3-1+struktur2~trusty2) trusty; urgency=medium
+
+  * Rebuild with updated libressl 
+
+ -- Simon Eisenmann <simon@struktur.de>  Tue, 21 Mar 2017 13:55:14 +0100
+
 nginx (1.10.3-1+struktur2~trusty1) trusty; urgency=medium
 
   * Build against libressl 2.5.1
