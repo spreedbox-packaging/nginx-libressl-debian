@@ -1,3 +1,9 @@
+nginx (1.10.3-1+struktur4~xenial1) xenial; urgency=medium
+
+  * Build against libressl 2.5.3
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 12 Apr 2017 08:48:03 +0200
+
 nginx (1.10.3-1+struktur3~xenial1) xenial; urgency=medium
 
   * Build against libressl 2.5.2
