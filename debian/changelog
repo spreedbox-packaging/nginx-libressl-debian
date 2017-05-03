@@ -1,3 +1,9 @@
+nginx (1.10.3-1+struktur5~precise1) precise; urgency=medium
+
+  * Build against libressl 2.5.4
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 03 May 2017 09:51:05 +0200
+
 nginx (1.10.3-1+struktur4~precise1) precise; urgency=medium
 
   * Build against libressl 2.5.3
